@@ -1,10 +1,14 @@
+## This function takes a given directory of files and a threshold to compute the 
+## correlation between two pollutants, namely sulfate and nitrate. 
+## It performs this computation only for monitor locations for which the 
+## number of completely observed cases exceeds the given threshold
+
 corr <- function(directory, threshold = 0){
         id <- 1:332
         mywd <- getwd()
         idlength <- length(id)
         myfilenamevec <- character(length = idlength)
         mycor1 <- data.frame()
-        #         mycor2 <- numeric()        
         countvec <- numeric(length = idlength)
         for(k in seq_along(id)){
                 myfilenamevec[k]<- paste(mywd,"/",directory,"/",sprintf("%03d",id[k]),".csv", sep = "")

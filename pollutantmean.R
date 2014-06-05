@@ -1,3 +1,6 @@
+## This function returns the mean of a given pollutant in a given 
+## directory and file(s) id number(s)
+
 pollutantmean <- function(directory, pollutant, id=1:332){
         mywd <- getwd()
         idlength <- length(id)

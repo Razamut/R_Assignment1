@@ -1,3 +1,8 @@
+## This function reads a directory that contains 332 files and returns the number
+## of completely observed cases for each file.
+## You may also choose any particular file(s) or any number of files from the 
+## directory you would like to work with
+
 complete <- function(directory, id=1:332){
         mywd <- getwd()
         idlength <- length(id)
